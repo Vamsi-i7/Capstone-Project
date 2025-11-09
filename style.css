@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FCF5EE;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    padding-top: 100px; /* reduced: navbar stays compact while logo can overflow */
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #88001b;
+    padding: 12px 40px; /* compact navbar padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding-left: 18px; /* bring content closer to the left edge */
+    padding-right: 40px; /* keep some right padding for spacing */
+    margin: 0;
+    height: 72px; /* keep navbar visually compact */
+    overflow: visible; /* allow logo to overflow outside the navbar */
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.nav_center ul{
+  display:flex;
+  list-style:none;
+  gap:20px;
+  align-items:center;
+}
+.nav_center ul li a:hover{
+    color: gold;
+    background-color: #f028508f;
+    border-radius: 10px;
+    transform: translateY(-1px);
+}
+
+.nav_center ul li{
+  position:relative;
+}
+
+.nav_center ul li a{
+  color:#fff5ee;
+  text-decoration:none;
+  padding:8px 12px;
+  display:block;
+}
+
+.nav_center ul li ul{
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#88001b;
+  min-width:200px;
+  display:none;
+  padding:10px 0;
+  border-radius:8px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+  z-index:1000;
+}
+
+.nav_center ul li:hover > ul{
+  display:block;
+  box-shadow: 5px 5px 20px brown;
+}
+
+.nav_center ul li ul li{
+  padding:0;
+}
+
+.nav_center ul li ul li a{
+  padding:8px 16px;
+  color:#ddd;
+}
+
+.nav_right{
+  display:flex;
+  align-items:center;
+}
+
+
+.brand-text{
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fff5ee;
+  display:inline-block;
+}
+
+.brand-text .accent{
+  background: linear-gradient(90deg,#FFD36B 0%, #FF6B6B 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.nav_right .auth-buttons{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn{
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+}
+
+
+.btn-signin{
+  background: transparent;
+  color: #fff5ee;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 12px;
+}
+
+.btn-signin:hover{
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-2px);
+}
+
+.btn-signup{
+  background: linear-gradient(90deg,#FFD36B 0%, #FF6B6B 100%);
+  color: #88001b;
+  padding: 8px 16px;
+  box-shadow: 0 6px 18px rgba(255,107,107,0.08);
+}
+
+.btn-signup:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255,107,107,0.14);
+}
+
