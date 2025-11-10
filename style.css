@@ -1,26 +1,30 @@
+/* for every element  */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  background-color: #fcf5ee;
+  background-color: #0b0c22;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  padding-top: 60px; 
+  padding-top: 60px;
 }
 
+/* navbar */
 .navbar {
   position: fixed;
   width: 100%;
   top: 0;
-  background: #88001b;
+  background: #05050f;
+  opacity: 99%;
   padding: 12px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
   z-index: 1000;
+  box-shadow: 2px 2px 70px ;
 }
 
 .logo {
@@ -44,35 +48,33 @@ body {
 .nav_center ul {
   display: flex;
   list-style: none;
-  /* gap: clamp(8px, 2vw, 20px);
-  justify-content: center; */
   align-items: center;
+  gap: 40px;
+}
+.nav_center ul li a {
+  color: #838ce5;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
 }
 .nav_center ul li a:hover {
-  color: gold;
-  background-color: #f028508f;
+  color: rgb(0, 0, 0);
+  background-color: #838ce5;
   border-radius: 10px;
   transform: translateY(-1px);
-  transition: background 0.3s ease, transform 0.2s ease;
-
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .nav_center ul li {
   position: relative;
 }
 
-.nav_center ul li a {
-  color: #fff5ee;
-  text-decoration: none;
-  padding: 8px 12px;
-  display: block;
-}
 
 .nav_center ul li ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #88001b;
+  background: #0f1237;
   min-width: 200px;
   display: none;
   padding: 10px 0;
@@ -83,7 +85,7 @@ body {
 
 .nav_center ul li:hover > ul {
   display: block;
-  box-shadow: 5px 5px 20px brown;
+  box-shadow: 5px 5px 20px #838ce5;
 }
 
 .nav_center ul li ul li {
@@ -92,7 +94,7 @@ body {
 
 .nav_center ul li ul li a {
   padding: 8px 16px;
-  color: #ddd;
+  color: #838ce5;
 }
 
 .nav_right {
@@ -105,7 +107,7 @@ body {
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: #fff5ee;
+  color: #838ce5;
   display: inline-block;
 }
 
@@ -142,8 +144,10 @@ body {
 }
 
 .btn-signin:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: #838ce5;
+  color: #0b0c22;
   transform: translateY(-2px);
+  box-shadow: 1px 1px 10px #838ce5;
 }
 
 .btn-signup {
@@ -155,20 +159,22 @@ body {
 
 .btn-signup:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.14);
+  box-shadow: 1px 1px 10px #838ce5;
 }
 
 .hero {
-  height: 40vh;
-  background: linear-gradient(180deg, #ffffff8f 0%, #f028508f 100%);
+  height: 55vh;
+  background: linear-gradient(180deg, #0b0c22 0%, #838ce5 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  margin: 0px;
+  /* border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px; */
+  border-radius: 40px;
+  margin: 100px;
   padding: clamp(24px, 6vw, 40px) 0;
+  flex-wrap: wrap;
 }
 
 .hero .hero-content {
@@ -185,7 +191,7 @@ body {
   margin: 0 0 8px 0;
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
-  color: #111;
+  color: #bcceff;
   line-height: 1.02;
   letter-spacing: -0.8px;
   text-transform: none;
@@ -193,34 +199,34 @@ body {
 }
 
 .hero h1 span {
-  background: linear-gradient(90deg, #ff6b6b 0%, #ffb300 100%);
+  background: linear-gradient(180deg, #0b0c22 0%, #2b305b 100%);
   background-clip: text;
   color: transparent;
   display: inline-block;
 }
 
-                .hero h1::after {
-                content: "";
-                display: block;
-                width: clamp(56px, 12vw, 140px);
-                height: 6px;
-                margin: 12px auto 0;
-                border-radius: 6px;
-                background: linear-gradient(90deg, #ffd36b, #ff6b6b);
-                opacity: 0.95;
-                }
+.hero h1::after {
+  content: "";
+  display: block;
+  width: clamp(56px, 12vw, 140px);
+  height: 6px;
+  margin: 12px auto 0;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffd36b, #ff6b6b);
+  opacity: 0.95;
+}
 
 .hero p {
   margin: 15px 0 30px;
-  color: #222;
+  color: #c1c5e9;
   font-size: clamp(0.95rem, 2.2vw, 1.15rem);
   max-width: 900px;
-  margin: 12px auto 20px;
+  margin: 30px auto 40px;
 }
 
 .cta-btn {
-  background: #c50f33;
-  color: white;
+  background: #D6B9FC;
+  color: #0b0c22;
   padding: 12px 28px;
   border-radius: 30px;
   text-decoration: none;
@@ -230,38 +236,49 @@ body {
 }
 
 .cta-btn:hover {
-  background: #ff1e2d;
+  background: #516bdd;
   transform: translateY(-3px);
+  color: #ffffff;
+  box-shadow: 1px 1px 30px #001788;
 }
+
+
+/* our services box  */
+.services {
+  /* background: linear-gradient(180deg, #838ce5 0%, #0b0c22 100%); */
+  background-color: #6c75cd;
+  border-radius: 80px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  
+} 
 
 .services {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 36px 20px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-sizing: border-box;
+  padding: clamp(30px, 30vw, 46px);
+  margin: 90px;
+  /* border-radius: %; */
+}
+.services h2 {
+  text-align: justify;
+  margin-bottom: 28px;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  color: #ffffff;
+  text-shadow: 1px 1px 20px rgb(33, 33, 209);
 }
 
-.services h2{ 
-    text-align:justify; 
-    margin-bottom: 28px; 
-    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-    color: #e50914; 
-}
-
-.service-container{
+.service-container {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: start;
+  cursor: pointer;
 }
 
-.service-card{
-  background: #fff;
+.service-card {
+  background-color: #ffffff ;
   padding: 18px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -270,7 +287,13 @@ body {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.service-card img{
+.service-card:hover {
+  transition: background 0.3s ease, transform 0.2s ease;
+  transform: translateY(-3px);
+  box-shadow: 1px 1px 15px #D6B9FC;;
+  /* background: #D6B9FC; */
+}
+.service-card img {
   max-width: 64px;
   width: auto;
   height: auto;
@@ -278,76 +301,94 @@ body {
   margin-bottom: 10px;
 }
 
-.service-card h3{ 
-    font-size: 1rem; margin: 6px 0 0; color:#111 
+.service-card h3 {
+  font-size: 1rem;
+  margin: 6px 0 0;
+  color: #111;
 }
 
-.service-card:hover{ 
-    transition: background 0.3s ease, transform 0.2s ease;
-    transform: translateY(-3px); 
-    box-shadow: 1px 1px 50px rgb(253, 31, 75); 
-}
 
-.services{
-  padding: clamp(20px, 3vw, 36px);
-  margin: 80px auto;
-}
-
+/* why choose haspay */
 .features {
-  padding: 100px 80px;
-  background: #fcf5ee;
+  padding: 10px 80px 60px 80px;
+  /* background: linear-gradient(180deg, #838ce5 0%, #0b0c22 50%); */
+  background: linear-gradient(180deg, #0b0c22 25%, #838ce5 100% );
   text-align: center;
-  margin: auto;
+  margin: 20px 100px;
   margin-bottom: 90px;
+  border-radius: 90px;
 }
 
 .features h2 {
-  color: #E50914;
+  color: #ffffff;
   margin-bottom: 40px;
 }
 
 .feature-list {
   display: flex;
-  /* flex-wrap: wrap; */
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 25px;
   justify-content: center;
 }
 
 .feature {
-  background: #ffffff;
+  background: #D6B9FC;
   padding: 30px;
   width: 300px;
   border-radius: 15px;
   transition: 0.3s;
+  display: grid;
 }
 
 .feature:hover {
   box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
 }
 
-.banner_cont{
-    width: 90vw;
-    height: 90vh;
-    background-color: #ffffff;
-    margin: auto;
-    margin-bottom: 40px;
-    border-radius: 20px;
+/* banners */
+
+.banner{
+    display: flex;
+    gap: 40px;
+    margin: 90px;
+    /* justify-content: center;
+    flex-direction: row;
+    align-items: center; */
+    }
+    .banner_cont {
+        width: 84vw;
+  height: 90vh;
+    background: linear-gradient(180deg, #838ce5 0%, #0b0c22 99%);
+
+  border-radius: 90px;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
+/* #banner1{
+      background: linear-gradient(90deg, #838ce5 0%, #0b0c22 100%);
 
+
+}
+#banner2{
+      background: linear-gradient(270deg, #838ce5 0%, #0b0c22 100%);
+
+
+} */
+
+/* contact us */
 .footer {
-    background: linear-gradient(180deg, #ffffff8f 0%, #f028508f 100%);
+  background: linear-gradient(180deg, #0b0c22 10%, #838ce5 500%);
   text-align: center;
   padding: 40px 20px;
 }
 
 .footer h2 {
-  color: #E50914;
+  color: #e50914;
   margin-bottom: 10px;
 }
 
 .footer p {
-  color: #000000;
+  color: #D6B9FC;
   margin: 5px 0;
   font-size: 0.9rem;
 }
