@@ -24,7 +24,7 @@ body {
   align-items: center;
   gap: 16px;
   z-index: 1000;
-  box-shadow: 2px 2px 70px ;
+  box-shadow: 2px 2px 70px;
 }
 
 .logo {
@@ -68,7 +68,6 @@ body {
 .nav_center ul li {
   position: relative;
 }
-
 
 .nav_center ul li ul {
   position: absolute;
@@ -146,7 +145,6 @@ body {
 .btn-signin:hover {
   background: #838ce5;
   color: #0b0c22;
-  transform: translateY(-2px);
   box-shadow: 1px 1px 10px #838ce5;
 }
 
@@ -225,7 +223,7 @@ body {
 }
 
 .cta-btn {
-  background: #D6B9FC;
+  background: #d6b9fc;
   color: #0b0c22;
   padding: 12px 28px;
   border-radius: 30px;
@@ -242,7 +240,6 @@ body {
   box-shadow: 1px 1px 30px #001788;
 }
 
-
 /* our services box  */
 .services {
   /* background: linear-gradient(180deg, #838ce5 0%, #0b0c22 100%); */
@@ -250,8 +247,7 @@ body {
   border-radius: 80px;
   box-sizing: border-box;
   flex-wrap: wrap;
-  
-} 
+}
 
 .services {
   padding: clamp(30px, 30vw, 46px);
@@ -275,7 +271,7 @@ body {
 }
 
 .service-card {
-  background-color: #ffffff ;
+  background-color: #ffffff;
   padding: 18px;
   border-radius: 12px;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.04);
@@ -290,7 +286,7 @@ body {
 .service-card:hover {
   transition: background 0.3s ease, transform 0.2s ease;
   transform: translateY(-3px);
-  box-shadow: 1px 1px 15px #D6B9FC;;
+  box-shadow: 1px 1px 15px #d6b9fc;
   /* background: #D6B9FC; */
 }
 .service-card img {
@@ -307,12 +303,11 @@ body {
   color: #111;
 }
 
-
 /* why choose haspay */
 .features {
   padding: 10px 80px 60px 80px;
   /* background: linear-gradient(180deg, #838ce5 0%, #0b0c22 50%); */
-  background: linear-gradient(180deg, #0b0c22 25%, #838ce5 100% );
+  background: linear-gradient(180deg, #0b0c22 25%, #838ce5 100%);
   text-align: center;
   margin: 20px 100px;
   margin-bottom: 90px;
@@ -332,7 +327,7 @@ body {
 }
 
 .feature {
-  background: #D6B9FC;
+  background: #d6b9fc;
   padding: 30px;
   width: 300px;
   border-radius: 15px;
@@ -346,34 +341,76 @@ body {
 
 /* banners */
 
-.banner{
-    display: flex;
-    gap: 40px;
-    margin: 90px;
-    /* justify-content: center;
-    flex-direction: row;
-    align-items: center; */
-    }
-    .banner_cont {
-        width: 84vw;
+.banner {
+  display: flex;
+  gap: 40px;
+  margin: 90px;
+  /* justify-content: center;
+  flex-direction: row;
+  align-items: center; */
+}
+.banner_cont {
+  width: 84vw;
   height: 90vh;
-    background: linear-gradient(180deg, #838ce5 0%, #0b0c22 99%);
-
+  background: linear-gradient(180deg, #838ce5 0%, #0b0c22 99%);
   border-radius: 90px;
   margin: auto;
   margin-bottom: 40px;
 }
 
-/* #banner1{
-      background: linear-gradient(90deg, #838ce5 0%, #0b0c22 100%);
-
-
+.ban_card{
+    display: flex;
+    /* justify-content: ; */
+    /* flex-wrap: wrap; */
+    right: 30px;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+    flex-direction: column;
 }
-#banner2{
-      background: linear-gradient(270deg, #838ce5 0%, #0b0c22 100%);
 
+#atmc{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 90px;
+    /* margin: auto; */
+    /* margin-top: 40px; */
+}
+.ct{
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    margin: auto;
+    margin-top: auto;
+    flex-direction: column;
+    
+}
+#Credit{
+    color: white;
+}
+#CreditCards{
+    display: block;
+}  
+#cardpara{
+        color: rgb(255, 255, 255);
+}
+#brand2{
+    margin: 10px 0px 5px 0px;
+}
 
-} */
+.brand-text1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #1c1c4b;
+  display: inline-block;
+}
+.brand-text1 .accent1 {
+  background: linear-gradient(90deg, #ffd36b 0%, #ff6b6b 100%);
+  background-clip: text;
+  color: transparent;
+}
 
 /* contact us */
 .footer {
@@ -388,7 +425,7 @@ body {
 }
 
 .footer p {
-  color: #D6B9FC;
+  color: #d6b9fc;
   margin: 5px 0;
   font-size: 0.9rem;
 }
