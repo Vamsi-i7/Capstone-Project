@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="st">
-</head>
-<body>
-    <div class="container">
 
-    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up — HasPay</title>
+    <link rel="stylesheet" href="/pages CSS/signin.css" />
+</head>
+
+<body>
+    <a href="/index.html" aria-label="Back to home"><img src="/icons and images/back button.svg" alt="back"
+            style="width:36px;position:absolute;left:18px;top:18px"></a>
+
+    <main class="signup-wrap">
+        <section id="signup-card" class="signup-card">
+            <div class="sleft">
+                <h1 class="brand">Sign In</h1>
+                <p class="lead">Welcome Back Bro</p>
+            </div>
+
+            <form class="signup-form" action="#" method="post" novalidate>
+                <!-- <div class="row">
+                    <div class="col">
+                        <label for="first">First name</label>
+                        <input id="first" name="first" type="text" placeholder="First name" required />
+                    </div>
+                    <div class="col">
+                        <label for="last">Last name</label>
+                        <input id="last" name="last" type="text" placeholder="Last name" required />
+                    </div>
+                </div> -->
+
+                <label for="email">Mobile number or email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Password" required />
+
+                <button type="submit" class="btn">Sign In</button>
+
+                <a href="" class="terms">Forget password</a>
+
+                <p class="signin-link">Don't have an account? <a href="/pages/signup.html">Sign up</a></p>
+            </form>
+        </section>
+    </main>
 </body>
+
 </html>
