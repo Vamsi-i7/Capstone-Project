@@ -305,7 +305,7 @@ img {
 .service-card:hover {
     transition: background 0.3s ease, transform 0.2s ease;
     transform: scale(1.05);
-    box-shadow: 3px 3px 50px #000000;
+    box-shadow: 3px 3px 50px #8d92c8;
 
 }
 
@@ -513,7 +513,6 @@ img {
         order: 2;
     }
 
-
     .hero {
         margin: 16px;
         padding: 20px 12px;
@@ -567,7 +566,7 @@ img {
 
 @media (max-width: 480px) {
     .brand-text {
-        font-size: 1rem;
+        font-size: 20px;
     }
 
     .btn {
