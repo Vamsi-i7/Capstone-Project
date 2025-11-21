@@ -273,11 +273,17 @@ img {
 }
 
 .services h2 {
-    text-align: justify;
+    /* text-align: justify; */
     margin-bottom: 28px;
     font-size: clamp(1.4rem, 2.6vw, 1.9rem);
     color: #ffffff;
     text-shadow: 1px 1px 20px rgb(33, 33, 209);
+}
+
+.s-text{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
 }
 
 .service-container {
@@ -572,7 +578,7 @@ img {
 
     .btn {
         padding: 6px 10px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .hero h1 {

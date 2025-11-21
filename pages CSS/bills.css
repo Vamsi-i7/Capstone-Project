@@ -161,3 +161,53 @@ body {
   transform: translateY(-2px);
   box-shadow: 1px 1px 10px #838ce5;
 }
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .nav_center ul {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav_right .auth-buttons {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 793px) {
+    .navbar {
+        padding: 10px 14px;
+    }
+
+    .brand-text {
+        font-size: 1.6rem;
+    }
+
+    .nav_center {
+        display: none;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .nav_right {
+        order: 2;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .brand-text {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
