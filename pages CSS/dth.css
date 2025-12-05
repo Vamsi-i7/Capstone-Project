@@ -161,3 +161,23 @@ body {
   transform: translateY(-2px);
   box-shadow: 1px 1px 10px #838ce5;
 }
+
+/* Theme Variables */
+:root {
+  --bg-dark: #0b0c22;
+  --nav-bg: #05050f;
+  --accent: #838ce5;
+  --accent-start: #ffd36b;
+  --accent-end: #ff6b6b;
+  --muted-border: rgba(255,255,255,0.12);
+  --btn-signin-text: #fff5ee;
+}
+
+body { background-color: var(--bg-dark); }
+.navbar { background: var(--nav-bg); box-shadow: 2px 2px 70px var(--accent); }
+.nav_center ul li a { color: var(--accent); }
+.nav_center ul li a:hover { background-color: var(--accent); }
+.brand-text { color: var(--accent); }
+.brand-text .accent { background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%); }
+.btn-signin { color: var(--btn-signin-text); border: 1px solid var(--muted-border); }
+.btn-signup { background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%); }

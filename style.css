@@ -5,8 +5,75 @@
     padding: 0;
 }
 
+/* color control center*/
+:root {
+    --bg-dark: #0b0c22;
+    --nav-bg: #05050f;
+    --accent: #838ce5; 
+    --accent-start: #ffd36b; 
+    --accent-end: #ff6b6b;   
+    --hero-text: #bcceff;   
+    --text-primary: #ffffff; 
+    --text-secondary: #c1c5e9; 
+    --muted-border: rgba(255, 255, 255, 0.12);
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.04);
+    --btn-signin-text: #fff5ee;
+    --btn-signup-text: #000000;
+    --box-shadow-accent: #020207;
+    --footer-accent: #e50914;
+    /* dvwsgsrsrgrs */
+    --feature-box-color:#d6b9fc;
+    --feature-box-hover:rgba(229, 9, 20, 0.3);
+    --brand-text-HAS:#1c1c4b;
+    --brand-text-PAY1:#ffd36b;
+    --brand-text-PAY2:#ff6b6b;
+}
+
+/* Light theme overrides */
+html.light-theme {
+    --bg-dark: #ffffff;
+    --nav-bg: #ffffff;
+    --accent: #516bdd;
+    --hero-text: #0b0c22;
+    --text-primary: #0b0c22;
+    --text-secondary: #333333;
+    --muted-border: rgba(0,0,0,0.08);
+    --card-bg: #f8f8ff;
+    --card-shadow: rgba(0,0,0,0.06);
+    --btn-signin-text: #0b0c22;
+    --btn-signup-text: #000000;
+    --box-shadow-accent: #516bdd80;
+    /* dvwsgsrsrgrs */
+    --feature-box-color:#d6b9fc;
+    --feature-box-hover:rgba(229, 9, 20, 0.3);
+    --brand-text-HAS:#1c1c4b;
+    --brand-text-PAY1:#ffd36b;
+    --brand-text-PAY2:#ff6b6b;
+}
+
+/* Theme toggle button  */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    background: transparent;
+    border: 1px solid var(--muted-border);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.nav_right .theme-toggle {
+    margin-left: 8px;
+}
+
 body {
-    background-color: #0b0c22;
+    background-color: var(--bg-dark);
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
     padding-top: 64px;
@@ -26,7 +93,7 @@ img {
     position: fixed;
     width: 100%;
     top: 0;
-    background: #05050f;
+    background: var(--nav-bg);
     opacity: 99%;
     padding: 12px 50px;
     display: flex;
@@ -34,7 +101,7 @@ img {
     align-items: center;
     gap: 16px;
     z-index: 1000;
-    box-shadow: 2px 2px 70px;
+    box-shadow: 2px 2px 70px var(--box-shadow-accent);
 }
 
 .logo {
@@ -64,7 +131,7 @@ img {
 }
 
 .nav_center ul li a {
-    color: #838ce5;
+    color: var(--accent);
     text-decoration: none;
     padding: 8px 12px;
     display: block;
@@ -72,7 +139,7 @@ img {
 
 .nav_center ul li a:hover {
     color: rgb(0, 0, 0);
-    background-color: #838ce5;
+    background-color: var(--accent);
     border-radius: 10px;
     transform: translateY(-1px);
     transition: background 0.2s ease, transform 0.2s ease;
@@ -120,12 +187,12 @@ img {
     font-size: 30px;
     font-weight: 800;
     letter-spacing: -0.5px;
-    color: #838ce5;
+    color: var(--accent);
     display: inline-block;
 }
 
 .brand-text .accent {
-    background: linear-gradient(90deg, #ffd36b 0%, #ff6b6b 100%);
+    background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%);
     background-clip: text;
     color: transparent;
 }
@@ -151,32 +218,32 @@ img {
 
 .btn-signin {
     background: transparent;
-    color: #fff5ee;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--btn-signin-text);
+    border: 1px solid var(--muted-border);
     padding: 6px 12px;
 }
 
 .btn-signin:hover {
-    background: #838ce5;
-    color: #0b0c22;
-    box-shadow: 1px 1px 10px #838ce5;
+    background: var(--accent);
+    color: var(--bg-dark);
+    box-shadow: 1px 1px 10px var(--accent);
 }
 
 .btn-signup {
-    background: linear-gradient(90deg, #ffd36b 0%, #ff6b6b 100%);
-    color: #000000;
+    background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%);
+    color: var(--btn-signup-text);
     padding: 8px 16px;
     box-shadow: 0 6px 18px rgba(255, 107, 107, 0.08);
 }
 
 .btn-signup:hover {
     transform: scale(1.05);
-    box-shadow: 1px 1px 10px #838ce5;
+    box-shadow: 1px 1px 10px var(--accent);
 }
 
 .hero {
     height: 55vh;
-    background: linear-gradient(180deg, #0b0c22 0%, #838ce5 100%);
+    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--accent) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,7 +270,7 @@ img {
     margin: 0 0 8px 0;
     font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 800;
-    color: #bcceff;
+    color: var(--hero-text);
     line-height: 1.02;
     letter-spacing: -0.8px;
     text-transform: none;
@@ -211,7 +278,7 @@ img {
 }
 
 .hero h1 span {
-    background: linear-gradient(180deg, #0b0c22 0%, #2b305b 100%);
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #2b305b 100%);
     background-clip: text;
     color: transparent;
     display: inline-block;
@@ -230,15 +297,15 @@ img {
 
 .hero p {
     margin: 15px 0 30px;
-    color: #c1c5e9;
+    color: var(--text-secondary);
     font-size: clamp(0.95rem, 2.2vw, 1.15rem);
     max-width: 900px;
     margin: 30px auto 40px;
 }
 
 .cta-btn {
-    background: #d6b9fc;
-    color: #0b0c22;
+    background: var(--feature-box-color);
+    color: var(--bg-dark);
     padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none;
@@ -260,7 +327,7 @@ img {
 
 /* our services box  */
 .services {
-    background: linear-gradient(180deg, #838ce5 0%, #0b0c22 100%);
+    background: linear-gradient(180deg, var(--accent) 0%, var(--bg-dark) 100%);
     background-color: #6c75cd;
     border-radius: 80px;
     box-sizing: border-box;
@@ -276,7 +343,7 @@ img {
     /* text-align: justify; */
     margin-bottom: 28px;
     font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-    color: #ffffff;
+    color: var(--text-primary);
     text-shadow: 1px 1px 20px rgb(33, 33, 209);
 }
 
@@ -295,10 +362,10 @@ img {
 }
 
 .service-card {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     padding: 18px;
     border-radius: 12px;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 0px 20px var(--card-shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,13 +401,11 @@ img {
 
 
 
-
-
 /* why choose haspay */
 .features {
     padding: 10px 80px 60px 80px;
     /* background: linear-gradient(180deg, #838ce5 0%, #0b0c22 50%); */
-    background: linear-gradient(180deg, #0b0c22 25%, #838ce5 100%);
+    background: linear-gradient(180deg, var(--bg-dark) 25%, var(--accent) 100%);
     text-align: center;
     margin: 20px 100px;
     margin-bottom: 90px;
@@ -348,7 +413,7 @@ img {
 }
 
 .features h2 {
-    color: #ffffff;
+    color: var(--text-primary);
     margin-bottom: 40px;
 }
 
@@ -360,7 +425,7 @@ img {
 }
 
 .feature {
-    background: #d6b9fc;
+    background: var(--feature-box-color) ;
     padding: 30px;
     width: 300px;
     border-radius: 15px;
@@ -369,10 +434,8 @@ img {
 }
 
 .feature:hover {
-    box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+    box-shadow: 0 0 20px var(--feature-box-hover);
 }
-
-
 
 
 
@@ -391,7 +454,8 @@ img {
 .banner_cont {
     width: 84vw;
     height: 90vh;
-    background: linear-gradient(180deg, #838ce5 0%, #0b0c22 99%);
+    /* background: linear-gradient(180deg, #838ce5 0%, #0b0c22 99%); */
+    background: linear-gradient(180deg, var(--accent) 0%, var(--bg-dark) 100%);
     border-radius: 90px;
     margin: auto;
     margin-bottom: 40px;
@@ -446,30 +510,30 @@ img {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -0.5px;
-    color: #1c1c4b;
+    color: var(--brand-text-HAS);
     display: inline-block;
 }
 
 .brand-text1 .accent1 {
-    background: linear-gradient(90deg, #ffd36b 0%, #ff6b6b 100%);
+    background: linear-gradient(90deg, var(--brand-text-PAY1) 0%, var(--brand-text-PAY2) 100%);
     background-clip: text;
     color: transparent;
 }
 
 /* contact us */
 .footer {
-    background: linear-gradient(180deg, #0b0c22 10%, #838ce5 500%);
+    background: linear-gradient(180deg, var(--bg-dark) 10%, var(--accent) 500%);
     text-align: center;
     padding: 40px 20px;
 }
 
 .footer h2 {
-    color: #e50914;
+    color: var(--footer-accent);
     margin-bottom: 10px;
 }
 
 .footer p {
-    color: #d6b9fc;
+    color: var(--accent-start);
     margin: 5px 0;
     font-size: 0.9rem;
 }
@@ -596,7 +660,7 @@ img {
 
     .service-container {
         gap: 12px;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
     }
 
     .feature-list {

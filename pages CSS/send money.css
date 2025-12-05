@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #0b0c22;
   font-family: "Poppins", sans-serif;
@@ -24,7 +25,7 @@ body {
   align-items: center;
   gap: 16px;
   z-index: 1000;
-  box-shadow: 2px 2px 70px ;
+  box-shadow: 2px 2px 70px;
 }
 
 .logo {
@@ -33,6 +34,7 @@ body {
   gap: 10px;
   flex: 0 0 auto;
 }
+
 .nav_right .auth-buttons {
   display: flex;
   gap: 12px;
@@ -51,12 +53,14 @@ body {
   align-items: center;
   gap: 40px;
 }
+
 .nav_center ul li a {
   color: #838ce5;
   text-decoration: none;
   padding: 8px 12px;
   display: block;
 }
+
 .nav_center ul li a:hover {
   color: rgb(0, 0, 0);
   background-color: #838ce5;
@@ -83,7 +87,7 @@ body {
   z-index: 1000;
 }
 
-.nav_center ul li:hover > ul {
+.nav_center ul li:hover>ul {
   display: block;
   box-shadow: 5px 5px 20px #838ce5;
 }
@@ -160,4 +164,49 @@ body {
 .btn-signup:hover {
   transform: translateY(-2px);
   box-shadow: 1px 1px 10px #838ce5;
+}
+
+/* :root variables */
+:root {
+  --bg-dark: #0b0c22;
+  --nav-bg: #05050f;
+  --accent: #838ce5;
+  --accent-start: #ffd36b;
+  --accent-end: #ff6b6b;
+  --muted-border: rgba(255, 255, 255, 0.12);
+  --btn-signin-text: #fff5ee;
+}
+
+body {
+  background-color: var(--bg-dark);
+}
+
+.navbar {
+  background: var(--nav-bg);
+  box-shadow: 2px 2px 70px var(--accent);
+}
+
+.nav_center ul li a {
+  color: var(--accent);
+}
+
+.nav_center ul li a:hover {
+  background-color: var(--accent);
+}
+
+.brand-text {
+  color: var(--accent);
+}
+
+.brand-text .accent {
+  background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%);
+}
+
+.btn-signin {
+  color: var(--btn-signin-text);
+  border: 1px solid var(--muted-border);
+}
+
+.btn-signup {
+  background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%);
 }

@@ -4,8 +4,20 @@
   margin: 0;
   padding: 0;
 }
+
+/* Define theme variables in one place so colors can be changed globally */
+:root {
+  --bg-dark: #0b0c22;
+  --nav-bg: #05050f;
+  --accent: #838ce5;
+  --accent-start: #ffd36b;
+  --accent-end: #ff6b6b;
+  --muted-border: rgba(255,255,255,0.12);
+  --btn-signin-text: #fff5ee;
+}
+
 body {
-  background-color: #0b0c22;
+  background-color: var(--bg-dark);
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   padding-top: 60px;
@@ -16,7 +28,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
-  background: #05050f;
+  background: var(--nav-bg);
   opacity: 99%;
   padding: 12px 50px;
   display: flex;
@@ -24,7 +36,7 @@ body {
   align-items: center;
   gap: 16px;
   z-index: 1000;
-  box-shadow: 2px 2px 70px ;
+  box-shadow: 2px 2px 70px var(--accent);
 }
 
 .logo {
@@ -52,14 +64,14 @@ body {
   gap: 40px;
 }
 .nav_center ul li a {
-  color: #838ce5;
+  color: var(--accent);
   text-decoration: none;
   padding: 8px 12px;
   display: block;
 }
 .nav_center ul li a:hover {
   color: rgb(0, 0, 0);
-  background-color: #838ce5;
+  background-color: var(--accent);
   border-radius: 10px;
   transform: translateY(-1px);
   transition: background 0.2s ease, transform 0.2s ease;
@@ -107,12 +119,12 @@ body {
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  color: #838ce5;
+  color: var(--accent);
   display: inline-block;
 }
 
 .brand-text .accent {
-  background: linear-gradient(90deg, #ffd36b 0%, #ff6b6b 100%);
+  background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%);
   background-clip: text;
   color: transparent;
 }
@@ -138,8 +150,8 @@ body {
 
 .btn-signin {
   background: transparent;
-  color: #fff5ee;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--btn-signin-text);
+  border: 1px solid var(--muted-border);
   padding: 6px 12px;
 }
 
@@ -151,7 +163,7 @@ body {
 }
 
 .btn-signup {
-  background: linear-gradient(90deg, #ffd36b 0%, #ff6b6b 100%);
+  background: linear-gradient(90deg, var(--accent-start) 0%, var(--accent-end) 100%);
   color: #88001b;
   padding: 8px 16px;
   box-shadow: 0 6px 18px rgba(255, 107, 107, 0.08);

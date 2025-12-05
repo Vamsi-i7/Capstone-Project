@@ -12,6 +12,7 @@ html, body {
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right top, #0c0e2b, #313664, #090a20 );
+    /* consider replacing the above with variables if you want a global gradient */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -37,7 +38,7 @@ img:hover{
 }
 
 .signup-card {
-    background: linear-gradient(180deg, #838ce5 0%, #0b0c22 100%);
+    background: linear-gradient(180deg, var(--accent) 0%, var(--bg-dark) 100%);
     border-radius: 30px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
     overflow: hidden;
@@ -75,7 +76,7 @@ img:hover{
 }
 
 .cont .lead {
-    color: #c1c5e9;
+    color: var(--text-muted);
     opacity: 0.95;
     margin-top: 6px;
     font-size: 0.98rem;
@@ -96,7 +97,7 @@ img:hover{
 
 label {
     display: block;
-    color: #d6b9fc;
+    color: #d6b9fc; /* keep as-is or change to a variable if desired */
     font-size: 0.85rem;
     margin-bottom: 3px;
     margin-top: 10px;
@@ -107,7 +108,7 @@ input {
     padding: 10px 12px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(88, 68, 219, 0.036);
+    background: var(--input-bg);
     color: rgba(255, 255, 255, 0.6);
     outline: none;
 }
@@ -139,7 +140,7 @@ input::placeholder {
     display: inline-block;
     padding: 12px 18px;
     border-radius: 8px;
-    background: linear-gradient(90deg, #ffd36b, #ff6b6b);
+    background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
     color: #1b1b1b;
     font-weight: 700;
     border: none;
@@ -186,4 +187,13 @@ input::placeholder {
         padding: 18px;
     }
 
+}
+
+:root {
+    --bg-dark: #0b0c22;
+    --accent: #838ce5;
+    --accent-start: #ffd36b;
+    --accent-end: #ff6b6b;
+    --text-muted: #c1c5e9;
+    --input-bg: rgba(88, 68, 219, 0.036);
 }
