@@ -28,9 +28,14 @@
     --brand-text-HAS:#1c1c4b;
     --brand-text-PAY1:#ffd36b;
     --brand-text-PAY2:#ff6b6b;
+    --navbar-list-ul-text:#838ce5;
+    --navbar-uls-bgc:#0f1237;
+    --navcenter-ul-li-a:rgb(0, 0, 0);
+
+
 }
 
-/* Light theme overrides */
+
 html.light-theme {
     --bg-dark: #ffffff;
     --nav-bg: #ffffff;
@@ -50,6 +55,11 @@ html.light-theme {
     --brand-text-HAS:#1c1c4b;
     --brand-text-PAY1:#ffd36b;
     --brand-text-PAY2:#ff6b6b;
+    --navbar-list-ul-text:#516bdd;
+    --navbar-uls-bgc:#f8f8ff;
+    --navcenter-ul-li-a:rgb(226, 231, 255);
+
+;
 }
 
 /* Theme toggle button  */
@@ -138,7 +148,7 @@ img {
 }
 
 .nav_center ul li a:hover {
-    color: rgb(0, 0, 0);
+    color: var(--navcenter-ul-li-a);
     background-color: var(--accent);
     border-radius: 10px;
     transform: translateY(-1px);
@@ -154,7 +164,7 @@ img {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #0f1237;
+    background: var(--navbar-uls-bgc);
     min-width: 200px;
     display: none;
     padding: 10px 0;
@@ -174,7 +184,7 @@ img {
 
 .nav_center ul li ul li a {
     padding: 8px 16px;
-    color: #838ce5;
+    color: var(--navbar-list-ul-text);
 }
 
 .nav_right {

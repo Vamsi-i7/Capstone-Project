@@ -1,4 +1,3 @@
-
 (function () {
     const root = document.documentElement;
     const THEME_KEY = 'site-theme';
@@ -13,11 +12,11 @@
         if (!btn) return;
         const isLight = root.classList.contains('light-theme');
         btn.setAttribute('aria-pressed', String(isLight));
-
-        const sunIcon = `🌙`; 
-        const moonIcon = '<img src="icons and images/light.svg" alt="Light Mode" class="icon-svg">'; // You can also replace this with an <img> tag if you have a moon.svg
-
-        btn.innerHTML = isLight ? sunIcon : moonIcon;
+        const sun = '🌞';
+        const moon = '🌙';
+        btn.textContent = isLight ? sun : moon;
+        btn.setAttribute('title', isLight ? 'Light theme (click to switch to dark)' : 'Dark theme (click to switch to light)');
+        btn.setAttribute('aria-label', isLight ? 'Light theme' : 'Dark theme');
     }
     // -------------------------------------
 

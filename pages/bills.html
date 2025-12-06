@@ -1,89 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/pages CSS/bills.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="logo">
-        <a href="/index.html" class="brand">
-          <span class="brand-text">Has<span class="accent">Pay</span></span>
-        </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/pages CSS/bills.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="/index.html" class="brand">
+        <span class="brand-text">Has<span class="accent">Pay</span></span>
+      </a>
+    </div>
+    <nav class="nav_center">
+      <ul>
+        <li>
+          <a href="#RB">Recharge & Bills</a>
+          <ul>
+            <li>
+              <a href="/pages/bills.html" target="_blank">Mobile Recharge</a>
+            </li>
+            <li>
+              <a href="/pages/electric.html" target="_blank">Electricity bill</a>
+            </li>
+            <li>
+              <a href="/pages/dth.html" target="_blank">DTH Recharge</a>
+            </li>
+            <li>
+              <a href="/pages/loan emi.html" target="_blank">Pay Loan EMI</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#PS">Payments & services</a>
+          <ul>
+            <li>
+              <a href="/pages/online services.html" target="_blank">Online Services</a>
+            </li>
+            <li>
+              <a href="/pages/send money.html" target="_blank">Send Money to Anyone</a>
+            </li>
+            <!-- <li><a href="#RB" target="_blank">Bill Payments & Recharge</a></li> -->
+            <!-- <li><a href="#RB" target="_blank">Pay Loan EMI</a></li> -->
+          </ul>
+        </li>
+        <li>
+          <a href="#Comp">Company</a>
+          <ul>
+            <li><a href="/pages/about.html" target="_blank">About</a></li>
+            <li>
+              <a href="/pages/contact us.html" target="_blank">Contact Us </a>
+            </li>
+            <li>
+              <a href="/pages/customer.html" target="_blank">Customer Care</a>
+            </li>
+            <li>
+              <a href="/pages/terms.html" target="_blank">Terms & Condition</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="nav_right">
+      <div class="auth-buttons">
+        <a href="/pages/signin.html" class="btn btn-signin">Sign In</a>
+        <a href="/pages/signup.html" class="btn btn-signup">Sign Up</a>
+        <button class="theme-toggle" aria-pressed="false" title="Toggle theme">🌙</button>
       </div>
-      <nav class="nav_center">
-        <ul>
-          <li>
-            <a href="#RB">Recharge & Bills</a>
-            <ul>
-              <li>
-                <a href="/pages/bills.html" target="_blank">Mobile Recharge</a>
-              </li>
-              <li>
-                <a href="/pages/electric.html" target="_blank"
-                  >Electricity bill</a
-                >
-              </li>
-              <li>
-                <a href="/pages/dth.html" target="_blank">DTH Recharge</a>
-              </li>
-              <li>
-                <a href="/pages/loan emi.html" target="_blank">Pay Loan EMI</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#PS">Payments & services</a>
-            <ul>
-              <li>
-                <a href="/pages/online services.html" target="_blank"
-                  >Online Services</a
-                >
-              </li>
-              <li>
-                <a href="/pages/send money.html" target="_blank"
-                  >Send Money to Anyone</a
-                >
-              </li>
-              <!-- <li><a href="#RB" target="_blank">Bill Payments & Recharge</a></li> -->
-              <!-- <li><a href="#RB" target="_blank">Pay Loan EMI</a></li> -->
-            </ul>
-          </li>
-          <li>
-            <a href="#Comp">Company</a>
-            <ul>
-              <li><a href="/pages/about.html" target="_blank">About</a></li>
-              <li>
-                <a href="/pages/contact us.html" target="_blank">Contact Us </a>
-              </li>
-              <li>
-                <a href="/pages/customer.html" target="_blank">Customer Care</a>
-              </li>
-              <li>
-                <a href="/pages/terms.html" target="_blank"
-                  >Terms & Condition</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <div class="nav_right">
-        <div class="auth-buttons">
-          <a href="/pages/signin.html" class="btn btn-signin">Sign In</a>
-          <a href="/pages/signup.html" class="btn btn-signup">Sign Up</a>
-          <button class="theme-toggle" aria-pressed="false" title="Toggle theme">🌙</button>
+    </div>
+  </header>
+  <main class="container">
+    <h2>Mobile Recharge</h2>
+    <div class="card">
+      <form id="rechargeForm">
+        <div class="form-row">
+          <div>
+            <label class="label">Mobile Number</label>
+            <input name="phone" class="input" placeholder="10-digit mobile">
+          </div>
+          <div>
+            <label class="label">Operator</label>
+            <select name="operator" class="input">
+              <option value="">Select</option>
+              <option>Airtel</option>
+              <option>Jio</option>
+            </select>
+          </div>
         </div>
-      </div>
-    </header>
-    <main>
-      
-    </main>
-    <script src="/theme.js"></script>
+        <div style="margin-top:1rem">
+          <label class="label">Plans</label>
+          <div id="planGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem"></div>
+        </div>
+        <div class="card-actions" style="margin-top:1rem"><button class="btn primary" type="submit">Recharge</button>
+        </div>
+      </form>
+    </div>
 
+    <div id="rechargeResult" style="margin-top:1rem"></div>
+  </main>
+  <script src="/theme.js"></script>
+  <script src="/pages Js/bills.js"> </script>
+</body>
 
-  </body>
 </html>
